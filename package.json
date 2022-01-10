@@ -1,0 +1,29 @@
+{
+  "name": "flat",
+  "version": "0.1.0",
+  "description": "A simple vscode color theme generator",
+  "repository": "https://github.com/bpdo/flat.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --watch src src/index.js",
+    "build": "node src/index.js && mkdir -p build"
+  },
+  "engines": {
+    "vscode": "^1.43.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Flat",
+        "uiTheme": "vs-dark",
+        "path": "./dist/dark-color-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
