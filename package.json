@@ -19,7 +19,7 @@
       {
         "label": "Flat",
         "uiTheme": "vs-dark",
-        "path": "./dist/dark-color-theme.json"
+        "path": "./dist/flat-dark-color-theme.json"
       }
     ]
   },

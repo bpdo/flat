@@ -1,15 +1,24 @@
 const fs = require("fs").promises;
+
 const { getTheme } = require("./theme");
 
-const darkTheme = getTheme("dark");
+(async () => {
+  try {
+    const dist = "./dist";
 
-fs.mkdir("./dist", { recursive: true })
-  .then(() =>
-    Promise.all([
-      fs.writeFile(
-        "./dist/dark-color-theme.json",
-        JSON.stringify(darkTheme, null, 2)
-      ),
-    ])
-  )
-  .catch(() => process.exit(1));
+    // create the dist folder
+    await fs.mkdir(dist, { recursive: true });
+
+    // get the theme
+    const theme = getTheme();
+
+    // write the theme file
+    await fs.writeFile(
+      `${dist}/flat-dark-color-theme.json`,
+      JSON.stringify(theme, null, 2)
+    );
+  } catch (err) {
+    console.log(err);
+    process.exit(1);
+  }
+})();
