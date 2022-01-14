@@ -46,7 +46,7 @@ const getTheme = (name) => ({
     "breadcrumb.activeSelectionForeground": colors.foreground.active,
     "breadcrumbPicker.background": colors.base.default,
     "debugToolBar.background": colors.base.default,
-    // "diffEditor.insertedTextBackground": "#2ea04326",
+    "diffEditor.insertedTextBackground": colors.rainbow.green.dark,
     // "diffEditor.removedTextBackground": "#f8514926",
     "editor.foreground": colors.foreground.default,
     "editor.background": colors.base.default,
@@ -172,7 +172,7 @@ const getTheme = (name) => ({
     {
       scope: ["comment", "punctuation.definition.comment", "string.comment"],
       settings: {
-        foreground: "#d1d5db",
+        foreground: colors.token.comment,
       },
     },
     {
@@ -184,13 +184,13 @@ const getTheme = (name) => ({
         "entity",
       ],
       settings: {
-        foreground: colors.rainbow.blue.default,
+        foreground: colors.token.constant,
       },
     },
     {
       scope: ["entity.name", "meta.export.default", "meta.definition.variable"],
       settings: {
-        foreground: colors.rainbow.orange.default,
+        foreground: colors.token.variable,
       },
     },
     {
@@ -204,31 +204,31 @@ const getTheme = (name) => ({
         "meta.embedded.expression",
       ],
       settings: {
-        foreground: "#9ca3af",
+        foreground: colors.token.default,
       },
     },
     {
       scope: "entity.name.function",
       settings: {
-        foreground: colors.rainbow.violet.default,
+        foreground: colors.token.function,
       },
     },
     {
       scope: ["entity.name.tag", "support.class.component"],
       settings: {
-        foreground: colors.rainbow.green.default,
+        foreground: colors.token.default,
       },
     },
     {
       scope: "keyword",
       settings: {
-        foreground: colors.rainbow.red.default,
+        foreground: colors.token.keyword,
       },
     },
     {
       scope: ["storage", "storage.type"],
       settings: {
-        foreground: colors.rainbow.red.default,
+        foreground: colors.token.keyword,
       },
     },
     {
@@ -238,7 +238,7 @@ const getTheme = (name) => ({
         "storage.type.java",
       ],
       settings: {
-        foreground: "#9ca3af",
+        foreground: colors.token.default,
       },
     },
     {
@@ -248,7 +248,7 @@ const getTheme = (name) => ({
         "string punctuation.section.embedded source",
       ],
       settings: {
-        foreground: colors.rainbow.indigo.default,
+        foreground: colors.token.string,
       },
     },
     {
@@ -266,48 +266,48 @@ const getTheme = (name) => ({
     {
       scope: "variable",
       settings: {
-        foreground: colors.rainbow.orange.default,
+        foreground: colors.token.variable,
       },
     },
     {
       scope: "variable.other",
       settings: {
-        foreground: "#9ca3af",
+        foreground: colors.token.default,
       },
     },
     {
       scope: "invalid.broken",
       settings: {
         fontStyle: "italic",
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: "invalid.deprecated",
       settings: {
         fontStyle: "italic",
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: "invalid.illegal",
       settings: {
         fontStyle: "italic",
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: "invalid.unimplemented",
       settings: {
         fontStyle: "italic",
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: "carriage-return",
       settings: {
         fontStyle: "italic underline",
-        background: colors.rainbow.red.default,
+        background: colors.token.keyword,
         foreground: colors.rainbow.black.default,
         content: "^M",
       },
@@ -315,25 +315,25 @@ const getTheme = (name) => ({
     {
       scope: "message.error",
       settings: {
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: "string source",
       settings: {
-        foreground: "#9ca3af",
+        foreground: colors.token.default,
       },
     },
     {
       scope: "string variable",
       settings: {
-        foreground: colors.rainbow.blue.default,
+        foreground: colors.token.variable,
       },
     },
     {
       scope: ["source.regexp", "string.regexp"],
       settings: {
-        foreground: colors.rainbow.indigo.default,
+        foreground: colors.token.string,
       },
     },
     {
@@ -344,26 +344,26 @@ const getTheme = (name) => ({
         "string.regexp string.regexp.arbitrary-repitition",
       ],
       settings: {
-        foreground: colors.rainbow.indigo.default,
+        foreground: colors.token.string,
       },
     },
     {
       scope: "string.regexp constant.character.escape",
       settings: {
         fontStyle: "bold",
-        foreground: colors.rainbow.green.default,
+        foreground: colors.token.variable,
       },
     },
     {
       scope: "support.constant",
       settings: {
-        foreground: colors.rainbow.blue.default,
+        foreground: colors.token.default,
       },
     },
     {
       scope: "support.variable",
       settings: {
-        foreground: colors.rainbow.blue.default,
+        foreground: colors.token.variable,
       },
     },
     {
@@ -375,82 +375,13 @@ const getTheme = (name) => ({
     {
       scope: "punctuation.definition.list.begin.markdown",
       settings: {
-        foreground: colors.rainbow.orange.default,
-      },
-    },
-    {
-      scope: ["markup.heading", "markup.heading entity.name"],
-      settings: {
-        fontStyle: "bold",
-        foreground: colors.rainbow.blue.default,
-      },
-    },
-    {
-      scope: "markup.quote",
-      settings: {
-        foreground: colors.rainbow.green.default,
-      },
-    },
-    {
-      scope: "markup.italic",
-      settings: {
-        fontStyle: "italic",
-        foreground: "#9ca3af",
-      },
-    },
-    {
-      scope: "markup.bold",
-      settings: {
-        fontStyle: "bold",
-        foreground: "#9ca3af",
-      },
-    },
-    {
-      scope: "markup.raw",
-      settings: {
-        foreground: colors.rainbow.blue.default,
-      },
-    },
-    {
-      scope: [
-        "markup.deleted",
-        "meta.diff.header.from-file",
-        "punctuation.definition.deleted",
-      ],
-      settings: {
-        background: colors.rainbow.red.dark,
-        foreground: colors.rainbow.pink.default,
-      },
-    },
-    {
-      scope: [
-        "markup.inserted",
-        "meta.diff.header.to-file",
-        "punctuation.definition.inserted",
-      ],
-      settings: {
-        background: colors.rainbow.green.dark,
-        foreground: colors.rainbow.green.default,
-      },
-    },
-    {
-      scope: ["markup.changed", "punctuation.definition.changed"],
-      settings: {
-        background: colors.rainbow.orange.dark,
-        foreground: colors.rainbow.orange.default,
-      },
-    },
-    {
-      scope: ["markup.ignored", "markup.untracked"],
-      settings: {
-        foreground: colors.rainbow.blue.dark,
-        background: colors.rainbow.blue.default,
+        foreground: colors.token.variable,
       },
     },
     {
       scope: "meta.diff.range",
       settings: {
-        foreground: colors.rainbow.violet.default,
+        foreground: colors.token.function,
         fontStyle: "bold",
       },
     },
@@ -483,19 +414,19 @@ const getTheme = (name) => ({
         "brackethighlighter.quote",
       ],
       settings: {
-        foreground: "#d1d5db",
+        foreground: colors.token.comment,
       },
     },
     {
       scope: "brackethighlighter.unmatched",
       settings: {
-        foreground: colors.rainbow.pink.default,
+        foreground: colors.token.invalid,
       },
     },
     {
       scope: ["constant.other.reference.link", "string.other.link"],
       settings: {
-        foreground: colors.rainbow.indigo.default,
+        foreground: colors.token.string,
         fontStyle: "underline",
       },
     },
